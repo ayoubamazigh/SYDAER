@@ -1,2 +1,0 @@
-# SYDAER
-Visual Basic Application

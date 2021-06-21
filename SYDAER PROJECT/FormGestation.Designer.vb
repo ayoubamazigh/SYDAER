@@ -24,6 +24,8 @@ Partial Class FormGestation
     Private Sub InitializeComponent()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.zone = New System.Windows.Forms.GroupBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -33,10 +35,8 @@ Partial Class FormGestation
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.zone.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -55,6 +55,7 @@ Partial Class FormGestation
         'zone
         '
         Me.zone.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.zone.Controls.Add(Me.DateTimePicker1)
         Me.zone.Controls.Add(Me.ComboBox1)
         Me.zone.Controls.Add(Me.Label4)
         Me.zone.Controls.Add(Me.DataGridView1)
@@ -66,7 +67,6 @@ Partial Class FormGestation
         Me.zone.Controls.Add(Me.Label3)
         Me.zone.Controls.Add(Me.Label2)
         Me.zone.Controls.Add(Me.Label1)
-        Me.zone.Controls.Add(Me.TextBox2)
         Me.zone.Controls.Add(Me.TextBox1)
         Me.zone.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.zone.ForeColor = System.Drawing.Color.Black
@@ -76,6 +76,25 @@ Partial Class FormGestation
         Me.zone.TabIndex = 17
         Me.zone.TabStop = False
         Me.zone.Text = "INSERTION GESTATION"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(203, 109)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(259, 27)
+        Me.ComboBox1.TabIndex = 18
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(21, 109)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(134, 22)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "Code de Vache:"
         '
         'DataGridView1
         '
@@ -102,7 +121,7 @@ Partial Class FormGestation
         Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button7.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(477, 165)
+        Me.Button7.Location = New System.Drawing.Point(477, 90)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(181, 43)
         Me.Button7.TabIndex = 14
@@ -114,7 +133,7 @@ Partial Class FormGestation
         Me.Button6.BackColor = System.Drawing.Color.Aqua
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button6.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(477, 90)
+        Me.Button6.Location = New System.Drawing.Point(477, 160)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(181, 43)
         Me.Button6.TabIndex = 13
@@ -173,13 +192,6 @@ Partial Class FormGestation
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Code Gestation:"
         '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(203, 49)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(259, 25)
-        Me.TextBox2.TabIndex = 7
-        '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(203, 21)
@@ -187,24 +199,12 @@ Partial Class FormGestation
         Me.TextBox1.Size = New System.Drawing.Size(259, 25)
         Me.TextBox1.TabIndex = 6
         '
-        'Label4
+        'DateTimePicker1
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(21, 109)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(134, 22)
-        Me.Label4.TabIndex = 17
-        Me.Label4.Text = "Code de Vache:"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(203, 109)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(259, 27)
-        Me.ComboBox1.TabIndex = 18
+        Me.DateTimePicker1.Location = New System.Drawing.Point(203, 49)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(259, 25)
+        Me.DateTimePicker1.TabIndex = 19
         '
         'FormGestation
         '
@@ -234,8 +234,8 @@ Partial Class FormGestation
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label4 As Label
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

@@ -149,7 +149,6 @@ Partial Class Main
         Me.Controls.Add(Me.Button2)
         Me.DoubleBuffered = True
         Me.Name = "Main"
-        Me.Text = "Form1"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)

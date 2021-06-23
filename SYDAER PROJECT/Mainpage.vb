@@ -1,16 +1,5 @@
 ﻿Public Class Mainpage
 
-
-
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
     Private Sub Mainpage_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
         Dim dialog As DialogResult
         dialog = MessageBox.Show("Voulez-vous vraiment quitter", "Quitter", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
@@ -22,10 +11,6 @@
         End If
     End Sub
 
-    Private Sub ComboBox2_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
         FormGestation.Show()
     End Sub
@@ -34,20 +19,16 @@
         SelectionGestation.Show()
     End Sub
 
-    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
-
-    End Sub
-
-    Private Sub Mainpage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Visit_Tech.TextBox1.Text = Me.TextBox1.Text
         Visit_Tech.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Insemination.TextBox6.Text = Me.TextBox1.Text
         Insemination.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click

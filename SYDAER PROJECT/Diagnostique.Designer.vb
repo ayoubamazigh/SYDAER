@@ -112,6 +112,7 @@ Partial Class Diagnostique
         '
         'DataGridView2
         '
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(23, 191)
         Me.DataGridView2.Name = "DataGridView2"
@@ -179,6 +180,7 @@ Partial Class Diagnostique
         '
         'TextBox10
         '
+        Me.TextBox10.Enabled = False
         Me.TextBox10.Location = New System.Drawing.Point(618, 123)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(253, 25)

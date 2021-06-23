@@ -23,12 +23,14 @@ Partial Class Visit_Tech
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Vache = New System.Windows.Forms.GroupBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -41,12 +43,14 @@ Partial Class Visit_Tech
         '
         'Vache
         '
+        Me.Vache.Controls.Add(Me.TextBox4)
+        Me.Vache.Controls.Add(Me.TextBox1)
+        Me.Vache.Controls.Add(Me.Label2)
         Me.Vache.Controls.Add(Me.Button2)
         Me.Vache.Controls.Add(Me.DataGridView1)
         Me.Vache.Controls.Add(Me.TextBox3)
         Me.Vache.Controls.Add(Me.Label1)
         Me.Vache.Controls.Add(Me.TextBox2)
-        Me.Vache.Controls.Add(Me.ComboBox2)
         Me.Vache.Controls.Add(Me.Button7)
         Me.Vache.Controls.Add(Me.Button6)
         Me.Vache.Controls.Add(Me.Button5)
@@ -56,10 +60,36 @@ Partial Class Visit_Tech
         Me.Vache.ForeColor = System.Drawing.Color.Black
         Me.Vache.Location = New System.Drawing.Point(10, 37)
         Me.Vache.Name = "Vache"
-        Me.Vache.Size = New System.Drawing.Size(1106, 219)
+        Me.Vache.Size = New System.Drawing.Size(1106, 240)
         Me.Vache.TabIndex = 21
         Me.Vache.TabStop = False
         Me.Vache.Text = "INSERTION VISITE TECHNIQUE"
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(615, 25)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(476, 25)
+        Me.TextBox4.TabIndex = 37
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Location = New System.Drawing.Point(838, 57)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(253, 25)
+        Me.TextBox1.TabIndex = 36
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(674, 58)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(135, 22)
+        Me.Label2.TabIndex = 35
+        Me.Label2.Text = "Code Gestation"
         '
         'Button2
         '
@@ -75,17 +105,18 @@ Partial Class Visit_Tech
         '
         'DataGridView1
         '
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(23, 128)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1068, 84)
+        Me.DataGridView1.Size = New System.Drawing.Size(1068, 104)
         Me.DataGridView1.TabIndex = 34
         '
         'TextBox3
         '
         Me.TextBox3.Location = New System.Drawing.Point(201, 56)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(890, 25)
+        Me.TextBox3.Size = New System.Drawing.Size(442, 25)
         Me.TextBox3.TabIndex = 33
         '
         'Label1
@@ -106,20 +137,12 @@ Partial Class Visit_Tech
         Me.TextBox2.Size = New System.Drawing.Size(253, 25)
         Me.TextBox2.TabIndex = 31
         '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(628, 25)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(463, 27)
-        Me.ComboBox2.TabIndex = 28
-        '
         'Button7
         '
         Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button7.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(584, 87)
+        Me.Button7.Location = New System.Drawing.Point(303, 87)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(204, 32)
         Me.Button7.TabIndex = 14
@@ -131,7 +154,7 @@ Partial Class Visit_Tech
         Me.Button6.BackColor = System.Drawing.Color.Aqua
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button6.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(307, 87)
+        Me.Button6.Location = New System.Drawing.Point(595, 87)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(204, 32)
         Me.Button6.TabIndex = 13
@@ -154,7 +177,8 @@ Partial Class Visit_Tech
         '
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label11.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.CausesValidation = False
+        Me.Label11.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(467, 25)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(142, 22)
@@ -188,7 +212,7 @@ Partial Class Visit_Tech
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1124, 261)
+        Me.ClientSize = New System.Drawing.Size(1124, 281)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Vache)
         Me.Name = "Visit_Tech"
@@ -207,11 +231,13 @@ Partial Class Visit_Tech
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Button7 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Button5 As Button
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents TextBox4 As TextBox
 End Class

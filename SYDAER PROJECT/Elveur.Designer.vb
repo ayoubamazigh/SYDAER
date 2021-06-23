@@ -281,7 +281,7 @@ Partial Class FormElveur
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.elveur)
         Me.Name = "FormElveur"
-        Me.Text = "Gestion Elveur"
+        Me.Text = "b"
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.elveur.ResumeLayout(False)
         Me.elveur.PerformLayout()

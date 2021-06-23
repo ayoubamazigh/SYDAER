@@ -23,14 +23,14 @@ Partial Class SelectionGestation
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -47,6 +47,24 @@ Partial Class SelectionGestation
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "GroupBox1"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.Location = New System.Drawing.Point(503, 30)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(267, 20)
+        Me.TextBox1.TabIndex = 12
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(396, 30)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(101, 18)
+        Me.Label3.TabIndex = 11
+        Me.Label3.Text = "Nom Elveur:"
         '
         'ComboBox1
         '
@@ -82,6 +100,7 @@ Partial Class SelectionGestation
         'Button1
         '
         Me.Button1.BackColor = System.Drawing.Color.Aqua
+        Me.Button1.Enabled = False
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(574, 32)
@@ -109,23 +128,6 @@ Partial Class SelectionGestation
         Me.Label2.Size = New System.Drawing.Size(140, 22)
         Me.Label2.TabIndex = 14
         Me.Label2.Text = "Code Gestation:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(396, 30)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(101, 18)
-        Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Nom Elveur:"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(503, 30)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(267, 20)
-        Me.TextBox1.TabIndex = 12
         '
         'SelectionGestation
         '

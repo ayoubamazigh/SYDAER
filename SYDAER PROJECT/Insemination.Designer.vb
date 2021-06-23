@@ -23,23 +23,23 @@ Partial Class Insemination
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBo4 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
@@ -53,23 +53,23 @@ Partial Class Insemination
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.TextBox1)
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.DataGridView2)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
+        Me.GroupBox2.Controls.Add(Me.TextBox7)
         Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.TextBox9)
+        Me.GroupBox2.Controls.Add(Me.TextBo4)
         Me.GroupBox2.Controls.Add(Me.ComboBox1)
         Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
-        Me.GroupBox2.Controls.Add(Me.ComboBox4)
         Me.GroupBox2.Controls.Add(Me.Label13)
-        Me.GroupBox2.Controls.Add(Me.TextBox10)
-        Me.GroupBox2.Controls.Add(Me.TextBox11)
+        Me.GroupBox2.Controls.Add(Me.TextBox6)
+        Me.GroupBox2.Controls.Add(Me.TextBox3)
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Controls.Add(Me.Label16)
         Me.GroupBox2.Controls.Add(Me.Label17)
-        Me.GroupBox2.Controls.Add(Me.TextBox12)
-        Me.GroupBox2.Controls.Add(Me.TextBox13)
+        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.TextBox5)
         Me.GroupBox2.Controls.Add(Me.Button4)
         Me.GroupBox2.Controls.Add(Me.Button8)
         Me.GroupBox2.Controls.Add(Me.Button9)
@@ -85,6 +85,13 @@ Partial Class Insemination
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "INSERTION INSEMINATION"
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(201, 24)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(253, 25)
+        Me.TextBox1.TabIndex = 35
+        '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.Red
@@ -99,18 +106,19 @@ Partial Class Insemination
         '
         'DataGridView2
         '
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(23, 191)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(1068, 116)
         Me.DataGridView2.TabIndex = 34
         '
-        'TextBox4
+        'TextBox7
         '
-        Me.TextBox4.Location = New System.Drawing.Point(201, 161)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(670, 25)
-        Me.TextBox4.TabIndex = 33
+        Me.TextBox7.Location = New System.Drawing.Point(201, 161)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(670, 25)
+        Me.TextBox7.TabIndex = 33
         '
         'Label8
         '
@@ -123,12 +131,12 @@ Partial Class Insemination
         Me.Label8.TabIndex = 32
         Me.Label8.Text = "Observation:"
         '
-        'TextBox9
+        'TextBo4
         '
-        Me.TextBox9.Location = New System.Drawing.Point(201, 25)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(253, 25)
-        Me.TextBox9.TabIndex = 31
+        Me.TextBo4.Location = New System.Drawing.Point(618, 25)
+        Me.TextBo4.Name = "TextBo4"
+        Me.TextBo4.Size = New System.Drawing.Size(253, 25)
+        Me.TextBo4.TabIndex = 31
         '
         'ComboBox1
         '
@@ -145,14 +153,6 @@ Partial Class Insemination
         Me.DateTimePicker2.Size = New System.Drawing.Size(253, 25)
         Me.DateTimePicker2.TabIndex = 29
         '
-        'ComboBox4
-        '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(618, 24)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(253, 27)
-        Me.ComboBox4.TabIndex = 28
-        '
         'Label13
         '
         Me.Label13.AutoSize = True
@@ -164,19 +164,20 @@ Partial Class Insemination
         Me.Label13.TabIndex = 26
         Me.Label13.Text = "Code Gestation:"
         '
-        'TextBox10
+        'TextBox6
         '
-        Me.TextBox10.Location = New System.Drawing.Point(618, 123)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(253, 25)
-        Me.TextBox10.TabIndex = 25
+        Me.TextBox6.Enabled = False
+        Me.TextBox6.Location = New System.Drawing.Point(618, 123)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(253, 25)
+        Me.TextBox6.TabIndex = 25
         '
-        'TextBox11
+        'TextBox3
         '
-        Me.TextBox11.Location = New System.Drawing.Point(201, 123)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(253, 25)
-        Me.TextBox11.TabIndex = 24
+        Me.TextBox3.Location = New System.Drawing.Point(201, 123)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(253, 25)
+        Me.TextBox3.TabIndex = 24
         '
         'Label14
         '
@@ -223,19 +224,19 @@ Partial Class Insemination
         Me.Label17.Text = "Order:"
         Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'TextBox12
+        'TextBox2
         '
-        Me.TextBox12.Location = New System.Drawing.Point(201, 90)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(253, 25)
-        Me.TextBox12.TabIndex = 18
+        Me.TextBox2.Location = New System.Drawing.Point(201, 90)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(253, 25)
+        Me.TextBox2.TabIndex = 18
         '
-        'TextBox13
+        'TextBox5
         '
-        Me.TextBox13.Location = New System.Drawing.Point(618, 59)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(253, 25)
-        Me.TextBox13.TabIndex = 17
+        Me.TextBox5.Location = New System.Drawing.Point(618, 59)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(253, 25)
+        Me.TextBox5.TabIndex = 17
         '
         'Button4
         '
@@ -338,21 +339,20 @@ Partial Class Insemination
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Button3 As Button
     Friend WithEvents DataGridView2 As DataGridView
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox7 As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents TextBo4 As TextBox
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents ComboBox4 As ComboBox
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Button4 As Button
     Friend WithEvents Button8 As Button
     Friend WithEvents Button9 As Button
@@ -360,4 +360,5 @@ Partial Class Insemination
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents Label10 As Label
+    Friend WithEvents TextBox1 As TextBox
 End Class

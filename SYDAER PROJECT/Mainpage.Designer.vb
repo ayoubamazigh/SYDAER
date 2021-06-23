@@ -99,6 +99,7 @@ Partial Class Mainpage
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Button5)
+        Me.GroupBox2.Enabled = False
         Me.GroupBox2.Location = New System.Drawing.Point(12, 109)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(1041, 287)

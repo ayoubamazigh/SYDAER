@@ -38,7 +38,7 @@ Partial Class Formzone
         '
         'zone
         '
-        Me.zone.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.zone.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.zone.Controls.Add(Me.dgv)
         Me.zone.Controls.Add(Me.btnsupp)
         Me.zone.Controls.Add(Me.btnupdate)
@@ -104,24 +104,24 @@ Partial Class Formzone
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(36, 50)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(126, 22)
+        Me.Label2.Size = New System.Drawing.Size(139, 22)
         Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Nom de Zone:"
+        Me.Label2.Text = "Nom de Zone: *"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(35, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(127, 22)
+        Me.Label1.Size = New System.Drawing.Size(140, 22)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Code de Zone:"
+        Me.Label1.Text = "Code de Zone: *"
         '
         'TextBox2
         '
@@ -140,7 +140,7 @@ Partial Class Formzone
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Yellow
+        Me.Label10.BackColor = System.Drawing.Color.White
         Me.Label10.Font = New System.Drawing.Font("Microsoft YaHei", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(195, 9)
         Me.Label10.Name = "Label10"

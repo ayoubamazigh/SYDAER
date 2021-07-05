@@ -29,17 +29,17 @@ Partial Class analyse
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -127,37 +127,15 @@ Partial Class analyse
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Stastiques"
         '
-        'Label10
+        'Label11
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Yellow
-        Me.Label10.Font = New System.Drawing.Font("Microsoft YaHei", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(375, 9)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(199, 31)
-        Me.Label10.TabIndex = 39
-        Me.Label10.Text = "Espace Synthes"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(243, 49)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(29, 20)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "20"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(236, 82)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(39, 20)
-        Me.Label8.TabIndex = 7
-        Me.Label8.Text = "132"
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(246, 148)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(19, 20)
+        Me.Label11.TabIndex = 9
+        Me.Label11.Text = "9"
         '
         'Label9
         '
@@ -169,15 +147,37 @@ Partial Class analyse
         Me.Label9.TabIndex = 8
         Me.Label9.Text = "12"
         '
-        'Label11
+        'Label8
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(246, 148)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(19, 20)
-        Me.Label11.TabIndex = 9
-        Me.Label11.Text = "9"
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(236, 82)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(39, 20)
+        Me.Label8.TabIndex = 7
+        Me.Label8.Text = "132"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(243, 49)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(29, 20)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "20"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.White
+        Me.Label10.Font = New System.Drawing.Font("Microsoft YaHei", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(375, 9)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(199, 31)
+        Me.Label10.TabIndex = 39
+        Me.Label10.Text = "Espace Synthes"
+        Me.Label10.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'GroupBox2
         '
@@ -211,13 +211,13 @@ Partial Class analyse
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "GroupBox4"
         '
-        'ComboBox1
+        'DataGridView2
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(140, 16)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(569, 21)
-        Me.ComboBox1.TabIndex = 43
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(18, 40)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(691, 134)
+        Me.DataGridView2.TabIndex = 42
         '
         'Label12
         '
@@ -229,13 +229,13 @@ Partial Class analyse
         Me.Label12.TabIndex = 10
         Me.Label12.Text = "TAUREAU:"
         '
-        'DataGridView2
+        'ComboBox1
         '
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(18, 40)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(691, 134)
-        Me.DataGridView2.TabIndex = 42
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(140, 16)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(569, 21)
+        Me.ComboBox1.TabIndex = 43
         '
         'analyse
         '

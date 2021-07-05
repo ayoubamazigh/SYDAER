@@ -48,7 +48,7 @@ Partial Class TAUREAU
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Yellow
+        Me.Label8.BackColor = System.Drawing.Color.White
         Me.Label8.Font = New System.Drawing.Font("Microsoft YaHei", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(346, 7)
         Me.Label8.Name = "Label8"
@@ -58,6 +58,7 @@ Partial Class TAUREAU
         '
         'elveur
         '
+        Me.elveur.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.elveur.Controls.Add(Me.TextBox3)
         Me.elveur.Controls.Add(Me.Button4)
         Me.elveur.Controls.Add(Me.btnsupp)
@@ -150,20 +151,20 @@ Partial Class TAUREAU
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(32, 199)
+        Me.Label6.BackColor = System.Drawing.Color.White
+        Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(24, 199)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(75, 22)
+        Me.Label6.Size = New System.Drawing.Size(88, 22)
         Me.Label6.TabIndex = 22
-        Me.Label6.Text = "Origine:"
+        Me.Label6.Text = "Origine: *"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label5.BackColor = System.Drawing.Color.White
         Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(32, 165)
+        Me.Label5.Location = New System.Drawing.Point(24, 165)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(123, 22)
         Me.Label5.TabIndex = 21
@@ -172,9 +173,9 @@ Partial Class TAUREAU
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(32, 131)
+        Me.Label4.Location = New System.Drawing.Point(24, 131)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(94, 22)
         Me.Label4.TabIndex = 20
@@ -197,35 +198,35 @@ Partial Class TAUREAU
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(32, 96)
+        Me.Label3.Location = New System.Drawing.Point(24, 96)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(52, 22)
+        Me.Label3.Size = New System.Drawing.Size(65, 22)
         Me.Label3.TabIndex = 10
-        Me.Label3.Text = "Race:"
+        Me.Label3.Text = "Race: *"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(32, 62)
+        Me.Label2.Location = New System.Drawing.Point(24, 62)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(130, 22)
+        Me.Label2.Size = New System.Drawing.Size(138, 22)
         Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Nom Taureau :"
+        Me.Label2.Text = "Nom Taureau: *"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(29, 29)
+        Me.Label1.Location = New System.Drawing.Point(24, 29)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(126, 22)
+        Me.Label1.Size = New System.Drawing.Size(139, 22)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Code Taureau:"
+        Me.Label1.Text = "Code Taureau: *"
         '
         'TextBox2
         '

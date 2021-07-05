@@ -91,9 +91,14 @@ Public Class SelectionGestation
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Mainpage.TextBox1.Text = Me.ComboBox2.Text
-        Mainpage.GroupBox2.Enabled = True
-        Me.Close()
-        Mainpage.Show()
+        ComboBox2.Text = ComboBox2.Text.Replace(" ", "")
+        If (ComboBox2.Text = "") Then
+            MessageBox.Show("remplir les champs requis!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            Mainpage.TextBox1.Text = Me.ComboBox2.Text
+            Mainpage.GroupBox2.Enabled = True
+            Me.Close()
+            Mainpage.Show()
+        End If
     End Sub
 End Class

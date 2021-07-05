@@ -53,6 +53,7 @@ Partial Class Insemination
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.GroupBox2.Controls.Add(Me.TextBox1)
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.DataGridView2)
@@ -89,7 +90,7 @@ Partial Class Insemination
         '
         Me.TextBox1.Location = New System.Drawing.Point(201, 24)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(253, 25)
+        Me.TextBox1.Size = New System.Drawing.Size(242, 25)
         Me.TextBox1.TabIndex = 35
         '
         'Button3
@@ -123,7 +124,7 @@ Partial Class Insemination
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label8.BackColor = System.Drawing.Color.White
         Me.Label8.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(19, 163)
         Me.Label8.Name = "Label8"
@@ -150,19 +151,19 @@ Partial Class Insemination
         '
         Me.DateTimePicker2.Location = New System.Drawing.Point(201, 56)
         Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(253, 25)
+        Me.DateTimePicker2.Size = New System.Drawing.Size(242, 25)
         Me.DateTimePicker2.TabIndex = 29
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label13.BackColor = System.Drawing.Color.White
         Me.Label13.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(472, 125)
+        Me.Label13.Location = New System.Drawing.Point(459, 125)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(140, 22)
+        Me.Label13.Size = New System.Drawing.Size(153, 22)
         Me.Label13.TabIndex = 26
-        Me.Label13.Text = "Code Gestation:"
+        Me.Label13.Text = "Code Gestation: *"
         '
         'TextBox6
         '
@@ -176,13 +177,13 @@ Partial Class Insemination
         '
         Me.TextBox3.Location = New System.Drawing.Point(201, 123)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(253, 25)
+        Me.TextBox3.Size = New System.Drawing.Size(242, 25)
         Me.TextBox3.TabIndex = 24
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label14.BackColor = System.Drawing.Color.White
         Me.Label14.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(19, 125)
         Me.Label14.Name = "Label14"
@@ -193,18 +194,18 @@ Partial Class Insemination
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label15.BackColor = System.Drawing.Color.White
         Me.Label15.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(472, 90)
+        Me.Label15.Location = New System.Drawing.Point(459, 90)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(79, 22)
+        Me.Label15.Size = New System.Drawing.Size(92, 22)
         Me.Label15.TabIndex = 22
-        Me.Label15.Text = "Taureau:"
+        Me.Label15.Text = "Taureau: *"
         '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label16.BackColor = System.Drawing.Color.White
         Me.Label16.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.Location = New System.Drawing.Point(19, 91)
         Me.Label16.Name = "Label16"
@@ -215,9 +216,9 @@ Partial Class Insemination
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label17.BackColor = System.Drawing.Color.White
         Me.Label17.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(472, 58)
+        Me.Label17.Location = New System.Drawing.Point(459, 58)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(62, 22)
         Me.Label17.TabIndex = 20
@@ -228,7 +229,7 @@ Partial Class Insemination
         '
         Me.TextBox2.Location = New System.Drawing.Point(201, 90)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(253, 25)
+        Me.TextBox2.Size = New System.Drawing.Size(242, 25)
         Me.TextBox2.TabIndex = 18
         '
         'TextBox5
@@ -243,7 +244,7 @@ Partial Class Insemination
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button4.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(887, 111)
+        Me.Button4.Location = New System.Drawing.Point(887, 69)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(204, 32)
         Me.Button4.TabIndex = 14
@@ -255,7 +256,7 @@ Partial Class Insemination
         Me.Button8.BackColor = System.Drawing.Color.Aqua
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button8.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(887, 68)
+        Me.Button8.Location = New System.Drawing.Point(887, 112)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(204, 32)
         Me.Button8.TabIndex = 13
@@ -277,29 +278,29 @@ Partial Class Insemination
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label18.BackColor = System.Drawing.Color.White
         Me.Label18.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.Location = New System.Drawing.Point(19, 58)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(163, 22)
+        Me.Label18.Size = New System.Drawing.Size(176, 22)
         Me.Label18.TabIndex = 10
-        Me.Label18.Text = "Date Insemination:"
+        Me.Label18.Text = "Date Insemination: *"
         '
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label19.BackColor = System.Drawing.Color.White
         Me.Label19.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(472, 25)
+        Me.Label19.Location = New System.Drawing.Point(459, 26)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(85, 22)
+        Me.Label19.Size = New System.Drawing.Size(98, 22)
         Me.Label19.TabIndex = 9
-        Me.Label19.Text = "Cirtificat:"
+        Me.Label19.Text = "Cirtificat: *"
         '
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label20.BackColor = System.Drawing.Color.White
         Me.Label20.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.Location = New System.Drawing.Point(19, 26)
         Me.Label20.Name = "Label20"
@@ -310,7 +311,7 @@ Partial Class Insemination
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Yellow
+        Me.Label10.BackColor = System.Drawing.Color.White
         Me.Label10.Font = New System.Drawing.Font("Microsoft YaHei", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(444, 6)
         Me.Label10.Name = "Label10"

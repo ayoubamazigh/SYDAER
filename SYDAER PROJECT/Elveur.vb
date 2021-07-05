@@ -56,23 +56,47 @@ Public Class FormElveur
     End Sub
 
     Private Sub btnadd_Click(sender As Object, e As EventArgs) Handles btnadd.Click
-        Try
-            Connexion()
-            command.Connection = connection
-            command.CommandText = "INSERT INTO ELVEUR VALUES ('" & TextBox1.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & TextBox5.Text & "','" & TextBox6.Text & "',(SELECT code_zone from ZONE where nom_zone = '" & ComboBox1.Text & "'));"
-            command.CommandType = CommandType.Text
-            Dim i As Integer = command.ExecuteNonQuery()
-            If (i = 1) Then
-                MsgBox("Elveur a été ajouté avec succès")
+        Dim count As Integer
+
+        If (TextBox1.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "" Or ComboBox1.Text = "") Then
+            MessageBox.Show("remplir les champs requis!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+
+            Try
+                Connexion()
+                command.Connection = connection
+                command.CommandText = "SELECT count(*) FROM ELVEUR WHERE tele_Elveur = '" & TextBox5.Text & "';"
+                command.CommandType = CommandType.Text
+                count = command.ExecuteScalar()
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            End Try
+            connection.Close()
+
+
+
+            If (count = 0) Then
+                Try
+                    Connexion()
+                    command.Connection = connection
+                    command.CommandText = "INSERT INTO ELVEUR VALUES ('" & TextBox1.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & TextBox5.Text & "','" & TextBox6.Text & "',(SELECT code_zone from ZONE where nom_zone = '" & ComboBox1.Text & "'));"
+                    command.CommandType = CommandType.Text
+                    Dim i As Integer = command.ExecuteNonQuery()
+                    If (i = 1) Then
+                        MsgBox("Elveur a été ajouté avec succès")
+                        connection.Close()
+                        dgvLoad()
+                    Else
+                        MessageBox.Show("Elveur n'est pas été ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+                End Try
                 connection.Close()
-                dgvLoad()
             Else
-                MessageBox.Show("Elveur n'est pas été ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("ce numéro de téléphone existe déjà!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
-        End Try
-        connection.Close()
+        End If
     End Sub
 
     Private Sub btnsearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
@@ -138,4 +162,11 @@ Public Class FormElveur
         End If
     End Sub
 
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
+    End Sub
+
+    Private Sub elveur_Enter(sender As Object, e As EventArgs) Handles elveur.Enter
+
+    End Sub
 End Class

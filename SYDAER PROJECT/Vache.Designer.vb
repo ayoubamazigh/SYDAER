@@ -55,6 +55,7 @@ Partial Class FormVache
         '
         'Vache
         '
+        Me.Vache.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Vache.Controls.Add(Me.Label11)
         Me.Vache.Controls.Add(Me.TextBox7)
         Me.Vache.Controls.Add(Me.ComboBox2)
@@ -82,7 +83,7 @@ Partial Class FormVache
         Me.Vache.Controls.Add(Me.dgv)
         Me.Vache.Font = New System.Drawing.Font("Microsoft YaHei", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Vache.ForeColor = System.Drawing.Color.Black
-        Me.Vache.Location = New System.Drawing.Point(12, 43)
+        Me.Vache.Location = New System.Drawing.Point(12, 41)
         Me.Vache.Name = "Vache"
         Me.Vache.Size = New System.Drawing.Size(1000, 586)
         Me.Vache.TabIndex = 14
@@ -140,7 +141,7 @@ Partial Class FormVache
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label8.BackColor = System.Drawing.Color.White
         Me.Label8.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(39, 249)
         Me.Label8.Name = "Label8"
@@ -151,13 +152,13 @@ Partial Class FormVache
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label9.BackColor = System.Drawing.Color.White
         Me.Label9.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(39, 219)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(64, 22)
+        Me.Label9.Size = New System.Drawing.Size(77, 22)
         Me.Label9.TabIndex = 26
-        Me.Label9.Text = "Elveur:"
+        Me.Label9.Text = "Elveur: *"
         '
         'TextBox6
         '
@@ -176,40 +177,40 @@ Partial Class FormVache
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label7.BackColor = System.Drawing.Color.White
         Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(39, 188)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(56, 22)
+        Me.Label7.Size = New System.Drawing.Size(69, 22)
         Me.Label7.TabIndex = 23
-        Me.Label7.Text = "mère:"
+        Me.Label7.Text = "mère: *"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label6.BackColor = System.Drawing.Color.White
         Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(39, 163)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 22)
+        Me.Label6.Size = New System.Drawing.Size(64, 22)
         Me.Label6.TabIndex = 22
-        Me.Label6.Text = "Père:"
+        Me.Label6.Text = "Père: *"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label5.BackColor = System.Drawing.Color.White
         Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(39, 136)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(105, 22)
+        Me.Label5.Size = New System.Drawing.Size(118, 22)
         Me.Label5.TabIndex = 21
-        Me.Label5.Text = "Grand Père:"
+        Me.Label5.Text = "Grand Père: *"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(39, 109)
         Me.Label4.Name = "Label4"
@@ -243,7 +244,7 @@ Partial Class FormVache
         '
         Me.btndelete.BackColor = System.Drawing.Color.Red
         Me.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btndelete.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btndelete.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btndelete.Location = New System.Drawing.Point(774, 219)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(220, 52)
@@ -255,7 +256,7 @@ Partial Class FormVache
         '
         Me.btnsearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnsearch.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnsearch.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnsearch.Location = New System.Drawing.Point(774, 89)
         Me.btnsearch.Name = "btnsearch"
         Me.btnsearch.Size = New System.Drawing.Size(220, 54)
@@ -267,7 +268,7 @@ Partial Class FormVache
         '
         Me.btnupdate.BackColor = System.Drawing.Color.Aqua
         Me.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnupdate.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnupdate.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnupdate.Location = New System.Drawing.Point(774, 151)
         Me.btnupdate.Name = "btnupdate"
         Me.btnupdate.Size = New System.Drawing.Size(220, 59)
@@ -279,7 +280,7 @@ Partial Class FormVache
         '
         Me.btnadd.BackColor = System.Drawing.Color.Lime
         Me.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnadd.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnadd.Font = New System.Drawing.Font("Microsoft YaHei", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnadd.Location = New System.Drawing.Point(774, 24)
         Me.btnadd.Name = "btnadd"
         Me.btnadd.Size = New System.Drawing.Size(220, 55)
@@ -290,38 +291,39 @@ Partial Class FormVache
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(39, 82)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(138, 22)
+        Me.Label3.Size = New System.Drawing.Size(151, 22)
         Me.Label3.TabIndex = 10
-        Me.Label3.Text = "Date Naissance:"
+        Me.Label3.Text = "Date Naissance: *"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(39, 52)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(57, 22)
+        Me.Label2.Size = New System.Drawing.Size(70, 22)
         Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Race :"
+        Me.Label2.Text = "Race : *"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(39, 23)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(109, 22)
+        Me.Label1.Size = New System.Drawing.Size(122, 22)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Code Vache:"
+        Me.Label1.Text = "Code Vache: *"
         '
         'dgv
         '
+        Me.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv.Location = New System.Drawing.Point(6, 280)
         Me.dgv.Name = "dgv"
@@ -331,7 +333,7 @@ Partial Class FormVache
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Yellow
+        Me.Label10.BackColor = System.Drawing.Color.White
         Me.Label10.Font = New System.Drawing.Font("Microsoft YaHei", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(348, 9)
         Me.Label10.Name = "Label10"

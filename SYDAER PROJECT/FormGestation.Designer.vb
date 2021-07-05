@@ -24,6 +24,7 @@ Partial Class FormGestation
     Private Sub InitializeComponent()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.zone = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
@@ -36,7 +37,6 @@ Partial Class FormGestation
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.zone.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -44,7 +44,7 @@ Partial Class FormGestation
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.BackColor = System.Drawing.Color.Yellow
+        Me.Label10.BackColor = System.Drawing.Color.White
         Me.Label10.Font = New System.Drawing.Font("Microsoft YaHei", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(193, 9)
         Me.Label10.Name = "Label10"
@@ -54,7 +54,7 @@ Partial Class FormGestation
         '
         'zone
         '
-        Me.zone.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.zone.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.zone.Controls.Add(Me.DateTimePicker1)
         Me.zone.Controls.Add(Me.ComboBox1)
         Me.zone.Controls.Add(Me.Label4)
@@ -77,6 +77,13 @@ Partial Class FormGestation
         Me.zone.TabStop = False
         Me.zone.Text = "INSERTION GESTATION"
         '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(203, 49)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(259, 25)
+        Me.DateTimePicker1.TabIndex = 19
+        '
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
@@ -88,13 +95,13 @@ Partial Class FormGestation
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(21, 109)
+        Me.Label4.Location = New System.Drawing.Point(17, 109)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(134, 22)
+        Me.Label4.Size = New System.Drawing.Size(147, 22)
         Me.Label4.TabIndex = 17
-        Me.Label4.Text = "Code de Vache:"
+        Me.Label4.Text = "Code de Vache: *"
         '
         'DataGridView1
         '
@@ -162,9 +169,9 @@ Partial Class FormGestation
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(21, 79)
+        Me.Label3.Location = New System.Drawing.Point(16, 79)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(114, 22)
         Me.Label3.TabIndex = 10
@@ -173,24 +180,24 @@ Partial Class FormGestation
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(21, 50)
+        Me.Label2.Location = New System.Drawing.Point(16, 50)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(171, 22)
+        Me.Label2.Size = New System.Drawing.Size(184, 22)
         Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Data dernier Vilage:"
+        Me.Label2.Text = "Data dernier Vilage: *"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(21, 22)
+        Me.Label1.Location = New System.Drawing.Point(17, 22)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(140, 22)
+        Me.Label1.Size = New System.Drawing.Size(153, 22)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Code Gestation:"
+        Me.Label1.Text = "Code Gestation: *"
         '
         'TextBox1
         '
@@ -198,13 +205,6 @@ Partial Class FormGestation
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(259, 25)
         Me.TextBox1.TabIndex = 6
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(203, 49)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(259, 25)
-        Me.DateTimePicker1.TabIndex = 19
         '
         'FormGestation
         '

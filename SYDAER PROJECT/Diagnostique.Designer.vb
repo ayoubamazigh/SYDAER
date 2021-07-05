@@ -28,25 +28,20 @@ Partial Class Diagnostique
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -65,24 +60,19 @@ Partial Class Diagnostique
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.GroupBox2.Controls.Add(Me.ComboBox1)
+        Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.Label10)
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.DataGridView2)
         Me.GroupBox2.Controls.Add(Me.TextBox4)
         Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.TextBox9)
-        Me.GroupBox2.Controls.Add(Me.ComboBox1)
-        Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
-        Me.GroupBox2.Controls.Add(Me.ComboBox4)
+        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox2.Controls.Add(Me.Label13)
-        Me.GroupBox2.Controls.Add(Me.TextBox10)
-        Me.GroupBox2.Controls.Add(Me.TextBox11)
-        Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Controls.Add(Me.Label15)
-        Me.GroupBox2.Controls.Add(Me.Label16)
-        Me.GroupBox2.Controls.Add(Me.Label17)
-        Me.GroupBox2.Controls.Add(Me.TextBox12)
-        Me.GroupBox2.Controls.Add(Me.TextBox13)
+        Me.GroupBox2.Controls.Add(Me.TextBox6)
+        Me.GroupBox2.Controls.Add(Me.TextBox2)
         Me.GroupBox2.Controls.Add(Me.Button4)
         Me.GroupBox2.Controls.Add(Me.Button8)
         Me.GroupBox2.Controls.Add(Me.Button9)
@@ -93,7 +83,7 @@ Partial Class Diagnostique
         Me.GroupBox2.ForeColor = System.Drawing.Color.Black
         Me.GroupBox2.Location = New System.Drawing.Point(9, 39)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(1106, 318)
+        Me.GroupBox2.Size = New System.Drawing.Size(895, 433)
         Me.GroupBox2.TabIndex = 38
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "INSERTION INSEMINATION"
@@ -103,7 +93,7 @@ Partial Class Diagnostique
         Me.Button3.BackColor = System.Drawing.Color.Red
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(887, 153)
+        Me.Button3.Location = New System.Drawing.Point(673, 166)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(204, 32)
         Me.Button3.TabIndex = 21
@@ -114,150 +104,75 @@ Partial Class Diagnostique
         '
         Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Location = New System.Drawing.Point(23, 191)
+        Me.DataGridView2.Location = New System.Drawing.Point(6, 225)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(1068, 116)
+        Me.DataGridView2.Size = New System.Drawing.Size(871, 202)
         Me.DataGridView2.TabIndex = 34
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(201, 161)
+        Me.TextBox4.Location = New System.Drawing.Point(201, 158)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(670, 25)
+        Me.TextBox4.Size = New System.Drawing.Size(455, 25)
         Me.TextBox4.TabIndex = 33
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label8.BackColor = System.Drawing.Color.White
         Me.Label8.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(19, 163)
+        Me.Label8.Location = New System.Drawing.Point(19, 159)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(114, 22)
         Me.Label8.TabIndex = 32
         Me.Label8.Text = "Observation:"
         '
-        'TextBox9
+        'TextBox1
         '
-        Me.TextBox9.Location = New System.Drawing.Point(201, 25)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(253, 25)
-        Me.TextBox9.TabIndex = 31
+        Me.TextBox1.Location = New System.Drawing.Point(201, 25)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(455, 25)
+        Me.TextBox1.TabIndex = 31
         '
-        'ComboBox1
+        'DateTimePicker1
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(618, 91)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(253, 27)
-        Me.ComboBox1.TabIndex = 30
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Location = New System.Drawing.Point(201, 56)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(253, 25)
-        Me.DateTimePicker2.TabIndex = 29
-        '
-        'ComboBox4
-        '
-        Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(618, 24)
-        Me.ComboBox4.Name = "ComboBox4"
-        Me.ComboBox4.Size = New System.Drawing.Size(253, 27)
-        Me.ComboBox4.TabIndex = 28
+        Me.DateTimePicker1.Location = New System.Drawing.Point(201, 56)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(455, 25)
+        Me.DateTimePicker1.TabIndex = 29
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label13.BackColor = System.Drawing.Color.White
         Me.Label13.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(472, 125)
+        Me.Label13.Location = New System.Drawing.Point(19, 195)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(140, 22)
+        Me.Label13.Size = New System.Drawing.Size(153, 22)
         Me.Label13.TabIndex = 26
-        Me.Label13.Text = "Code Gestation:"
+        Me.Label13.Text = "Code Gestation: *"
         '
-        'TextBox10
+        'TextBox6
         '
-        Me.TextBox10.Enabled = False
-        Me.TextBox10.Location = New System.Drawing.Point(618, 123)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(253, 25)
-        Me.TextBox10.TabIndex = 25
+        Me.TextBox6.Enabled = False
+        Me.TextBox6.Location = New System.Drawing.Point(201, 194)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(455, 25)
+        Me.TextBox6.TabIndex = 25
         '
-        'TextBox11
+        'TextBox2
         '
-        Me.TextBox11.Location = New System.Drawing.Point(201, 123)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(253, 25)
-        Me.TextBox11.TabIndex = 24
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label14.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(19, 125)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(157, 22)
-        Me.Label14.TabIndex = 23
-        Me.Label14.Text = "Hormone Utulisee"
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label15.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(472, 90)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(79, 22)
-        Me.Label15.TabIndex = 22
-        Me.Label15.Text = "Taureau:"
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label16.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(19, 91)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(132, 22)
-        Me.Label16.TabIndex = 21
-        Me.Label16.Text = "Nature Chaleur"
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Label17.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(472, 58)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(62, 22)
-        Me.Label17.TabIndex = 20
-        Me.Label17.Text = "Order:"
-        Me.Label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'TextBox12
-        '
-        Me.TextBox12.Location = New System.Drawing.Point(201, 90)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(253, 25)
-        Me.TextBox12.TabIndex = 18
-        '
-        'TextBox13
-        '
-        Me.TextBox13.Location = New System.Drawing.Point(618, 59)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(253, 25)
-        Me.TextBox13.TabIndex = 17
+        Me.TextBox2.Location = New System.Drawing.Point(201, 90)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(455, 25)
+        Me.TextBox2.TabIndex = 18
         '
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button4.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(887, 111)
+        Me.Button4.Location = New System.Drawing.Point(673, 80)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(204, 32)
         Me.Button4.TabIndex = 14
@@ -269,7 +184,7 @@ Partial Class Diagnostique
         Me.Button8.BackColor = System.Drawing.Color.Aqua
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button8.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(887, 68)
+        Me.Button8.Location = New System.Drawing.Point(673, 123)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(204, 32)
         Me.Button8.TabIndex = 13
@@ -281,7 +196,7 @@ Partial Class Diagnostique
         Me.Button9.BackColor = System.Drawing.Color.Lime
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button9.Font = New System.Drawing.Font("Microsoft YaHei", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(887, 24)
+        Me.Button9.Location = New System.Drawing.Point(673, 37)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(204, 32)
         Me.Button9.TabIndex = 12
@@ -291,41 +206,73 @@ Partial Class Diagnostique
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label18.BackColor = System.Drawing.Color.White
         Me.Label18.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label18.Location = New System.Drawing.Point(19, 58)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(167, 22)
+        Me.Label18.Size = New System.Drawing.Size(180, 22)
         Me.Label18.TabIndex = 10
-        Me.Label18.Text = "Date Diagnostique:"
+        Me.Label18.Text = "Date Diagnostique: *"
         '
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label19.BackColor = System.Drawing.Color.White
         Me.Label19.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(472, 25)
+        Me.Label19.Location = New System.Drawing.Point(19, 92)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(84, 22)
+        Me.Label19.Size = New System.Drawing.Size(168, 22)
         Me.Label19.TabIndex = 9
-        Me.Label19.Text = "Type DG:"
+        Me.Label19.Text = "Type Diagnostique:"
         '
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Label20.BackColor = System.Drawing.Color.White
         Me.Label20.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.Location = New System.Drawing.Point(19, 26)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(171, 22)
+        Me.Label20.Size = New System.Drawing.Size(176, 22)
         Me.Label20.TabIndex = 8
-        Me.Label20.Text = "Code Diagnostique:"
+        Me.Label20.Text = "Code Diagnostique: "
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.White
+        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(326, 5)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(266, 31)
+        Me.Label1.TabIndex = 39
+        Me.Label1.Text = "Espace Diagnostique" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.White
+        Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(19, 123)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(180, 22)
+        Me.Label2.TabIndex = 40
+        Me.Label2.Text = "Code Insemination: *"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(201, 122)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(455, 27)
+        Me.ComboBox1.TabIndex = 41
         '
         'Diagnostique
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1122, 363)
+        Me.ClientSize = New System.Drawing.Size(914, 480)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Name = "Diagnostique"
         Me.Text = "Diagnostique"
@@ -333,6 +280,7 @@ Partial Class Diagnostique
         Me.GroupBox2.PerformLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -342,23 +290,18 @@ Partial Class Diagnostique
     Friend WithEvents DataGridView2 As DataGridView
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents DateTimePicker2 As DateTimePicker
-    Friend WithEvents ComboBox4 As ComboBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents Label13 As Label
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Button4 As Button
     Friend WithEvents Button8 As Button
     Friend WithEvents Button9 As Button
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

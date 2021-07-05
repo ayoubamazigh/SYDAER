@@ -50,22 +50,26 @@ Public Class TAUREAU
     End Sub
 
     Private Sub btnadd_Click(sender As Object, e As EventArgs) Handles btnadd.Click
-        Try
-            Connexion()
-            command.Connection = connection
-            command.CommandText = "INSERT INTO Taureau VALUES('" & TextBox1.Text & "','" & TextBox2.Text & "','" & ComboBox1.Text & "','" & TextBox4.Text & "','" & TextBox5.Text & "','" & TextBox3.Text & "'); "
-            command.CommandType = CommandType.Text
-            Dim i As Integer = command.ExecuteNonQuery()
-            If (i = 1) Then
-                MsgBox("TAUREAU a été ajouté avec succès")
-            Else
-                MessageBox.Show("Taureau n'est pas été ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
-        End Try
-        connection.Close()
-        dgvLoad()
+        If (TextBox1.Text = "" Or ComboBox1.Text = "" Or TextBox2.Text = "" Or TextBox3.Text = "") Then
+            MessageBox.Show("remplir les champs requis!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            Try
+                Connexion()
+                command.Connection = connection
+                command.CommandText = "INSERT INTO Taureau VALUES('" & TextBox1.Text & "','" & TextBox2.Text & "','" & ComboBox1.Text & "','" & TextBox4.Text & "','" & TextBox5.Text & "','" & TextBox3.Text & "'); "
+                command.CommandType = CommandType.Text
+                Dim i As Integer = command.ExecuteNonQuery()
+                If (i = 1) Then
+                    MsgBox("TAUREAU a été ajouté avec succès")
+                Else
+                    MessageBox.Show("Taureau n'est pas été ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            End Try
+            connection.Close()
+            dgvLoad()
+        End If
     End Sub
 
     Private Sub btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
@@ -92,9 +96,6 @@ Public Class TAUREAU
         Race.Show()
     End Sub
 
-    Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
-        Origine.Show()
-    End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Try
@@ -139,4 +140,9 @@ Public Class TAUREAU
         End If
     End Sub
 
+    Private Sub TAUREAU_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Insemination.cmbload()
+        Insemination.Show()
+        Me.Hide()
+    End Sub
 End Class

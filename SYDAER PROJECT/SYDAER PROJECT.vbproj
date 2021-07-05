@@ -158,12 +158,6 @@
     <Compile Include="Race.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Origine.Designer.vb">
-      <DependentUpon>Origine.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Origine.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -223,9 +217,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Race.resx">
       <DependentUpon>Race.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Origine.resx">
-      <DependentUpon>Origine.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

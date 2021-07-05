@@ -32,22 +32,26 @@ Public Class Race
     End Sub
 
     Private Sub btnadd_Click(sender As Object, e As EventArgs) Handles btnadd.Click
-        Try
-            Connexion()
-            command.Connection = connection
-            command.CommandText = "INSERT INTO Race VALUES('" & TextBox1.Text & "','" & TextBox2.Text & "');"
-            command.CommandType = CommandType.Text
-            Dim i As Integer = command.ExecuteNonQuery()
-            If (i = 1) Then
-                MsgBox("Zone a été ajouté avec succès")
-            Else
-                MessageBox.Show("Zone n'est pas été ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
-        End Try
-        connection.Close()
-        dgvLoad()
+        If (TextBox1.Text = "" Or TextBox2.Text = "") Then
+            MessageBox.Show("remplir les champs requis!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            Try
+                Connexion()
+                command.Connection = connection
+                command.CommandText = "INSERT INTO Race VALUES('" & TextBox1.Text & "','" & TextBox2.Text & "');"
+                command.CommandType = CommandType.Text
+                Dim i As Integer = command.ExecuteNonQuery()
+                If (i = 1) Then
+                    MsgBox("Zone a été ajouté avec succès")
+                Else
+                    MessageBox.Show("Zone n'est pas été ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+            End Try
+            connection.Close()
+            dgvLoad()
+        End If
     End Sub
 
     Private Sub btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click

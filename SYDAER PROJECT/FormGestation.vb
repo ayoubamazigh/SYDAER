@@ -51,23 +51,35 @@ Public Class FormGestation
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Try
-            Connexion()
-            command.Connection = connection
-            command.CommandText = "INSERT INTO Gestation VALUES ('" & TextBox1.Text & "','" & Format(DateTimePicker1.Value, "yyyy-M-dd") & "','" & TextBox3.Text & "','" & ComboBox1.Text & "');"
-            command.CommandType = CommandType.Text
-            Dim i As Integer = command.ExecuteNonQuery()
-            If (i = 1) Then
-                MsgBox("Gestation a été ajouté avec succès")
-                connection.Close()
-                dgvLoad()
+        Dim thisDate As Date
+        thisDate = Today
+
+
+        If (TextBox1.Text = "" Or ComboBox1.Text = "") Then
+            MessageBox.Show("remplir les champs requis!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            If (Format(DateTimePicker1.Value, "yyyy-M-dd") > thisDate) Then
+                MessageBox.Show("la date ne doit pas être postérieure à la date d'aujourd'hui!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
-                MessageBox.Show("Gestation n'est pas été ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Try
+                    Connexion()
+                    command.Connection = connection
+                    command.CommandText = "INSERT INTO Gestation VALUES ('" & TextBox1.Text & "','" & Format(DateTimePicker1.Value, "yyyy-M-dd") & "','" & TextBox3.Text & "','" & ComboBox1.Text & "');"
+                    command.CommandType = CommandType.Text
+                    Dim i As Integer = command.ExecuteNonQuery()
+                    If (i = 1) Then
+                        MsgBox("Gestation a été ajouté avec succès")
+                        connection.Close()
+                        dgvLoad()
+                    Else
+                        MessageBox.Show("Gestation n'est pas été ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+                End Try
+                connection.Close()
             End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
-        End Try
-        connection.Close()
+        End If
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click

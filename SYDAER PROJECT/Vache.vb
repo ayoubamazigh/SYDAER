@@ -79,24 +79,35 @@ Public Class FormVache
     End Sub
 
     Private Sub btnadd_Click(sender As Object, e As EventArgs) Handles btnadd.Click
-        Try
-            Connexion()
-            command.Connection = connection
-            command.CommandText = "INSERT INTO VACHE VALUES ('" & TextBox1.Text & "',(SELECT code_Race FROM RACE WHERE name_Race ='" & ComboBox1.Text & "'),' " & Format(dtp.Value, "yyyy-M-dd") & "','" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & TextBox5.Text & "','" & ComboBox2.Text & "','" & TextBox6.Text & "')
-"
-            command.CommandType = CommandType.Text
-            Dim i As Integer = command.ExecuteNonQuery()
-            If (i = 1) Then
-                MsgBox("Elveur a été ajouté avec succès")
-                connection.Close()
-                dgvLoad()
+        Dim thisDate As Date
+        thisDate = Today
+
+        If (TextBox1.Text = "" Or ComboBox1.Text = "" Or ComboBox2.Text = "" Or TextBox3.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "") Then
+            MessageBox.Show("remplir les champs requis!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            If (Format(dtp.Value, "yyyy-M-dd") > thisDate) Then
+                MessageBox.Show("la date ne doit pas être postérieure à la date d'aujourd'hui!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
-                MessageBox.Show("Elveur n'est pas été ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Try
+                    Connexion()
+                    command.Connection = connection
+                    command.CommandText = "INSERT INTO VACHE VALUES ('" & TextBox1.Text & "',(SELECT code_Race FROM RACE WHERE name_Race ='" & ComboBox1.Text & "'),' " & Format(dtp.Value, "yyyy-M-dd") & "','" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & TextBox5.Text & "','" & ComboBox2.Text & "','" & TextBox6.Text & "')
+"
+                    command.CommandType = CommandType.Text
+                    Dim i As Integer = command.ExecuteNonQuery()
+                    If (i = 1) Then
+                        MsgBox("Elveur a été ajouté avec succès")
+                        connection.Close()
+                        dgvLoad()
+                    Else
+                        MessageBox.Show("Elveur n'est pas été ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+                End Try
+                connection.Close()
             End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
-        End Try
-        connection.Close()
+        End If
     End Sub
 
     Private Sub btnsearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
@@ -179,5 +190,25 @@ Public Class FormVache
             End Try
             connection.Close()
         End If
+    End Sub
+
+    Private Sub dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv.CellContentClick
+
+    End Sub
+
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+
     End Sub
 End Class

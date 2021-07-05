@@ -41,7 +41,6 @@ D:\SYDAER\SYDAER PROJECT\obj\Debug\SYDAER_PROJECT.Vilage.resources
 D:\SYDAER\SYDAER PROJECT\obj\Debug\SYDAER_PROJECT.Visit_Tech.resources
 D:\SYDAER\SYDAER PROJECT\obj\Debug\SYDAER_PROJECT.Formzone.resources
 D:\SYDAER\SYDAER PROJECT\obj\Debug\SYDAER_PROJECT.Race.resources
-D:\SYDAER\SYDAER PROJECT\obj\Debug\SYDAER_PROJECT.Origine.resources
 D:\SYDAER\SYDAER PROJECT\obj\Debug\SYDAER_PROJECT.Resources.resources
 D:\SYDAER\SYDAER PROJECT\obj\Debug\SYDAER PROJECT.vbproj.GenerateResource.cache
 D:\SYDAER\SYDAER PROJECT\obj\Debug\SYDAER PROJECT.vbproj.CoreCompileInputs.cache

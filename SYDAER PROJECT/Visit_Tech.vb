@@ -11,19 +11,6 @@ Public Class Visit_Tech
         Catch ex As Exception
         End Try
     End Sub
-    Public Sub txtload()
-        Try
-            Connexion()
-            command.Connection = connection
-            command.CommandText = " SELECT MAX(code_Visite_Tech) FROM VISITE_TECHNIQUE"
-            command.CommandType = CommandType.Text
-            Dim I As Integer = command.ExecuteScalar
-            TextBox2.Text = I + 1
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
-        End Try
-        connection.Close()
-    End Sub
 
 
 
@@ -44,11 +31,27 @@ Public Class Visit_Tech
         connection.Close()
     End Sub
 
-    
+
 
     Private Sub Visit_Tech_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Try
+            Connexion()
+            command.Connection = connection
+            command.CommandText = "select count(code_Vilage) from VILAGE where code_Gestation = '" & TextBox1.Text & "';"
+            command.CommandType = CommandType.Text
+            Dim i As Integer = command.ExecuteScalar
+            If (i <> 0) Then
+                MessageBox.Show("Cette gestation est déjà terminée!", "error", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Button5.Enabled = False
+                Button6.Enabled = False
+                Button7.Enabled = False
+                Button2.Enabled = False
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+        End Try
+        connection.Close()
         dgvLoad()
-        txtload()
     End Sub
 
     Private Sub Visit_Tech_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
@@ -57,31 +60,61 @@ Public Class Visit_Tech
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Try
-            Connexion()
-            command.Connection = connection
-            command.CommandText = "INSERT INTO VISITE_TECHNIQUE VALUES ('" & TextBox4.Text & "','" & TextBox3.Text & "','" & TextBox1.Text & "')"
-            command.CommandType = CommandType.Text
-            Dim i As Integer = command.ExecuteNonQuery()
-            If (i = 1) Then
-                MsgBox("Visite Technique a été ajouté avec succès")
-                connection.Close()
-                dgvLoad()
-                txtload()
+        Dim recomendation As String
+        Dim thisDate As Date
+        thisDate = Today
+
+        If (RadioButton1.Checked) Then
+            recomendation = "1"
+        Else
+            recomendation = "0"
+        End If
+
+        If (TextBox1.Text = "" Or (RadioButton1.Checked = False And RadioButton2.Checked = False)) Then
+            MessageBox.Show("remplir les champs requis!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        Else
+            If (Format(DateTimePicker1.Value, "yyyy-M-dd") > thisDate) Then
+                MessageBox.Show("la date ne doit pas être postérieure à la date d'aujourd'hui!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Else
-                MessageBox.Show("Visite Technique n'est pas été ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Try
+                    Connexion()
+                    command.Connection = connection
+                    command.CommandText = "UPDATE VISITE_TECHNIQUE set recomendation = 0 where  code_Gestation = '" & TextBox1.Text & "';"
+                    command.CommandType = CommandType.Text
+                    command.ExecuteNonQuery()
+
+                    command.CommandText = "INSERT INTO VISITE_TECHNIQUE VALUES ('" & recomendation & "','" & TextBox3.Text & "','" & TextBox1.Text & "','" & Format(DateTimePicker1.Value, "yyyy-M-dd") & "')"
+                    command.CommandType = CommandType.Text
+                    Dim i As Integer = command.ExecuteNonQuery()
+                    If (i = 1) Then
+                        MsgBox("Visite Technique a été ajouté avec succès")
+                        connection.Close()
+                        dgvLoad()
+                    Else
+                        MessageBox.Show("Visite Technique n'est pas été ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
+                Catch ex As Exception
+                    MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
+                End Try
+                connection.Close()
             End If
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
-        End Try
-        connection.Close()
+        End If
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim recomendation As String
+
+        If (RadioButton1.Checked) Then
+            recomendation = "1"
+        Else
+            recomendation = "0"
+        End If
+
+
         Try
             Connexion()
             command.Connection = connection
-            command.CommandText = "UPDATE VISITE_TECHNIQUE SET recomendation = '" & TextBox4.Text & "', observation = '" & TextBox3.Text & "' WHERE code_Visite_Tech = " & TextBox2.Text & ""
+            command.CommandText = "UPDATE VISITE_TECHNIQUE SET recomendation = '" & recomendation & "', observation = '" & TextBox3.Text & "', date_Visit_Tech = '" & Format(DateTimePicker1.Value, "yyyy-M-dd") & "' WHERE code_Visite_Tech = " & TextBox2.Text & ""
             command.CommandType = CommandType.Text
             Dim i As Integer = command.ExecuteNonQuery()
             If (i = 1) Then
@@ -104,8 +137,13 @@ Public Class Visit_Tech
             command.CommandType = CommandType.Text
             datareader = command.ExecuteReader
             datareader.Read()
-            TextBox4.Text = datareader(1)
+            If (datareader(1) = "1") Then
+                RadioButton1.Checked = True
+            Else
+                RadioButton2.Checked = True
+            End If
             TextBox3.Text = datareader(2)
+            DateTimePicker1.Value = datareader(4)
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
         End Try
@@ -134,5 +172,17 @@ Public Class Visit_Tech
             End Try
             connection.Close()
         End If
+    End Sub
+
+    Private Sub TextBox4_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
     End Sub
 End Class

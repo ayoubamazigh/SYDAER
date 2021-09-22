@@ -214,7 +214,7 @@ Partial Class FormGestation
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.zone)
         Me.Name = "FormGestation"
-        Me.Text = "Form1"
+        Me.Text = " "
         Me.zone.ResumeLayout(False)
         Me.zone.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

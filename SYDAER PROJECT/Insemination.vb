@@ -2,6 +2,8 @@
 Public Class Insemination
     Public connection As New SqlConnection("server=DESKTOP-R8C69DV; DataBase= SYDAER; integrated security= True")
     Public command As New SqlCommand
+    Public command2 As New SqlCommand
+    Public command3 As New SqlCommand
     Public datareader As SqlDataReader
 
     Public Sub Connexion()
@@ -11,19 +13,34 @@ Public Class Insemination
         End Try
     End Sub
 
-    Public Sub txtload()
+
+
+
+
+
+
+    Public Sub tupdate()
         Try
             Connexion()
             command.Connection = connection
-            command.CommandText = " SELECT MAX(code_Insemination) FROM Insemination"
+            command.CommandText = "SELECT * FROM TAUREAU"
             command.CommandType = CommandType.Text
-            Dim I As Integer = command.ExecuteScalar
-            TextBox1.Text = I + 1
+            datareader = command.ExecuteReader
+            While (datareader.Read)
+                ComboBox1.Items.Add(datareader(0))
+            End While
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
         End Try
         connection.Close()
     End Sub
+
+
+
+
+
+
+
 
     Public Sub cmbload()
         Try
@@ -58,7 +75,6 @@ Public Class Insemination
         connection.Close()
     End Sub
 
-
     Private Sub Label15_Click(sender As Object, e As EventArgs) Handles Label15.Click
         TAUREAU.Show()
     End Sub
@@ -85,7 +101,6 @@ Public Class Insemination
 
 
         dgvLoad()
-        txtload()
         cmbload()
     End Sub
 
@@ -111,14 +126,16 @@ Public Class Insemination
                     command.CommandType = CommandType.Text
                     command.ExecuteNonQuery()
 
-                    command.CommandText = "INSERT INTO INSEMINATION VALUES('" & TextBo4.Text & "','" & Format(DateTimePicker2.Value, "yyyy-M-dd") & "', '" & TextBox5.Text & "','" & TextBox2.Text & "', '" & ComboBox1.Text & "','" & TextBox3.Text & "','" & TextBox7.Text & "','" & TextBox6.Text & "');"
+                    command.CommandText = "INSERT INTO INSEMINATION VALUES('" & Format(DateTimePicker2.Value, "yyyy-M-dd") & "', '" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBo4.Text & "','" & TextBox5.Text & "','" & ComboBox1.Text & "','" & TextBox6.Text & "','" & TextBox7.Text & "');"
                     command.CommandType = CommandType.Text
                     Dim i As Integer = command.ExecuteNonQuery()
+
                     If (i = 1) Then
+                        command.CommandText = "UPDATE TAUREAU SET disponible = disponible - 1 WHERE code_Taureau = '" & ComboBox1.Text & "';"
+                        command.CommandType = CommandType.Text
+                        command.ExecuteNonQuery()
                         MsgBox("Insemination a été ajouté avec succès")
-                        connection.Close()
                         dgvLoad()
-                        txtload()
                     Else
                         MessageBox.Show("Insemination n'est pas été ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
                     End If
@@ -134,19 +151,19 @@ Public Class Insemination
         Try
             Connexion()
             command.Connection = connection
-            command.CommandText = "SELECT * FROM INSEMINATION WHERE code_Insemination = '" & TextBox1.Text & "'"
+            command.CommandText = "SELECT * FROM INSEMINATION WHERE code_Insemination = '" & TextBox1.Text & "' ;"
             command.CommandType = CommandType.Text
             datareader = command.ExecuteReader
             datareader.Read()
             TextBox1.Text = datareader(0)
-            TextBo4.Text = datareader(1)
-            DateTimePicker2.Value = datareader(2)
-            TextBox5.Text = datareader(3)
-            TextBox2.Text = datareader(4)
-            TextBox3.Text = datareader(6)
-            ComboBox1.Text = datareader(5)
-            TextBox7.Text = datareader(7)
-            TextBox6.Text = datareader(8)
+            DateTimePicker2.Value = datareader(1)
+            TextBox2.Text = datareader(2)
+            TextBox3.Text = datareader(3)
+            TextBo4.Text = datareader(4)
+            TextBox5.Text = datareader(5)
+            ComboBox1.Text = datareader(6)
+            TextBox6.Text = datareader(7)
+            TextBox7.Text = datareader(8)
         Catch ex As Exception
 
         End Try
@@ -183,21 +200,35 @@ Public Class Insemination
             Try
                 Connexion()
                 command.Connection = connection
-                command.CommandText = "DELETE FROM INSEMINATION WHERE code_Insemination = '" & TextBox1.Text & "';"
+
+                command.CommandText = "select code_taureau from  insemination where code_insemination = " & TextBox1.Text
                 command.CommandType = CommandType.Text
-                Dim i As Integer = command.ExecuteNonQuery()
-                connection.Close()
-                If (i = 1) Then
-                    MsgBox("Insemination a Modefier avec succès")
-                    dgvLoad()
+                Dim code_t As String = command.ExecuteScalar()
+
+                If (code_t = "") Then
+                    MessageBox.Show("INSIMINATION N'EXIST PAS", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
                 Else
-                    MessageBox.Show("Insemination n'est Modefier ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    command.CommandText = "DELETE FROM INSEMINATION WHERE code_Insemination = '" & TextBox1.Text & "';"
+                    command.CommandType = CommandType.Text
+                    Dim i As Integer = command.ExecuteNonQuery()
+
+                    If (i = 1) Then
+
+                        command.CommandText = "UPDATE TAUREAU SET disponible = disponible + 1 WHERE code_Taureau = '" & code_t & "';"
+                        command.CommandType = CommandType.Text
+                        command.ExecuteNonQuery()
+                        MsgBox("Insemination a été ajouté avec SUPRIMER")
+                    Else
+                        MessageBox.Show("Insemination n'est pas été ajouté", "ERREUR", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                    End If
                 End If
             Catch ex As Exception
                 MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
             End Try
-            connection.Close()
+
         End If
+        connection.Close()
+        dgvLoad()
     End Sub
 
     Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click

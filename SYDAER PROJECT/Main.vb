@@ -32,28 +32,6 @@ Public Class Main
         connection.Close()
     End Sub
 
-    Public Sub dgv2Load()
-        Dim thisDate As Date
-        thisDate = Today
-        thisDate = thisDate.AddMonths(-2)
-
-
-        Try
-            Connexion()
-            command.Connection = connection
-            command.CommandText = "SELECT cirtificat_Insemination as 'Cirtificat', date_Insemination as 'Date d''insemination', TAUREAU.nom_Taureau as 'Nom Taureau' , gestation.code_Gestation as 'Code Gestation', vache.code_Vache as 'Code Vache', ELVEUR.code_Elveur as 'Code Elvuer', ELVEUR.prenom_Elveur + ' ' + ELVEUR.nom_Elveur as 'Nom Elveur', ELVEUR.tele_Elveur as 'Telephone' FROM INSEMINATION,VACHE,GESTATION, ELVEUR,TAUREAU where GESTATION.code_Vache = VACHE.code_Vache and VACHE.code_Elveur = ELVEUR.code_Elveur and INSEMINATION.code_Taureau = TAUREAU.code_Taureau and date_Insemination > '2021-04-30' and code_Insemination NOT IN (select code_Insemination from DIAGNOSTIQUE);"
-            command.CommandType = CommandType.Text
-            datareader = command.ExecuteReader
-            Dim table As New DataTable
-            table.Load(datareader)
-            datareader.Close()
-            DataGridView1.DataSource = table
-        Catch ex As Exception
-            MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
-        End Try
-        connection.Close()
-    End Sub
-
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         FormElveur.Show()
         Me.Hide()
@@ -74,7 +52,6 @@ Public Class Main
 
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         dgv1Load()
-        dgv2Load()
 
     End Sub
 
@@ -82,7 +59,7 @@ Public Class Main
 
     End Sub
 
-    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs)
 
     End Sub
 

@@ -7,7 +7,6 @@
             e.Cancel = True
         Else
             Main.dgv1Load()
-            Main.dgv2Load()
             Main.DataGridView2.Refresh()
             Main.Show()
             Me.Hide()

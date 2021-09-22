@@ -49,7 +49,7 @@ Public Class Vilage
             Try
                 Connexion()
                 command.Connection = connection
-                command.CommandText = "INSERT INTO VILAGE VALUES ('" & TextBox2.Text & "', '" & TextBox3.Text & "','" & TextBox5.Text & "', '" & TextBox4.Text & "');"
+                command.CommandText = "INSERT INTO VILAGE VALUES ('" & TextBox1.Text & "','" & TextBox2.Text & "', '" & TextBox3.Text & "','" & TextBox5.Text & "', '" & TextBox4.Text & "');"
                 command.CommandType = CommandType.Text
                 Dim i As Integer = command.ExecuteNonQuery()
                 If (i = 1) Then

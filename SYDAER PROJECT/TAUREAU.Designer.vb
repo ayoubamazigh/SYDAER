@@ -41,6 +41,8 @@ Partial Class TAUREAU
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.dgv = New System.Windows.Forms.DataGridView()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.elveur.SuspendLayout()
         CType(Me.dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -59,6 +61,8 @@ Partial Class TAUREAU
         'elveur
         '
         Me.elveur.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.elveur.Controls.Add(Me.TextBox6)
+        Me.elveur.Controls.Add(Me.Label7)
         Me.elveur.Controls.Add(Me.TextBox3)
         Me.elveur.Controls.Add(Me.Button4)
         Me.elveur.Controls.Add(Me.btnsupp)
@@ -87,7 +91,7 @@ Partial Class TAUREAU
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(168, 198)
+        Me.TextBox3.Location = New System.Drawing.Point(168, 176)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(560, 25)
         Me.TextBox3.TabIndex = 30
@@ -143,7 +147,7 @@ Partial Class TAUREAU
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(168, 95)
+        Me.ComboBox1.Location = New System.Drawing.Point(168, 87)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(560, 27)
         Me.ComboBox1.TabIndex = 24
@@ -153,7 +157,7 @@ Partial Class TAUREAU
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.White
         Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(24, 199)
+        Me.Label6.Location = New System.Drawing.Point(24, 177)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(88, 22)
         Me.Label6.TabIndex = 22
@@ -164,7 +168,7 @@ Partial Class TAUREAU
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.White
         Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(24, 165)
+        Me.Label5.Location = New System.Drawing.Point(24, 148)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(123, 22)
         Me.Label5.TabIndex = 21
@@ -175,7 +179,7 @@ Partial Class TAUREAU
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.White
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(24, 131)
+        Me.Label4.Location = New System.Drawing.Point(24, 119)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(94, 22)
         Me.Label4.TabIndex = 20
@@ -183,14 +187,14 @@ Partial Class TAUREAU
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(168, 164)
+        Me.TextBox5.Location = New System.Drawing.Point(168, 147)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(560, 25)
         Me.TextBox5.TabIndex = 17
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(168, 130)
+        Me.TextBox4.Location = New System.Drawing.Point(168, 118)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(560, 25)
         Me.TextBox4.TabIndex = 16
@@ -200,7 +204,7 @@ Partial Class TAUREAU
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(24, 96)
+        Me.Label3.Location = New System.Drawing.Point(24, 88)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(65, 22)
         Me.Label3.TabIndex = 10
@@ -211,7 +215,7 @@ Partial Class TAUREAU
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(24, 62)
+        Me.Label2.Location = New System.Drawing.Point(24, 58)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(138, 22)
         Me.Label2.TabIndex = 9
@@ -230,7 +234,7 @@ Partial Class TAUREAU
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(168, 61)
+        Me.TextBox2.Location = New System.Drawing.Point(168, 57)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(560, 25)
         Me.TextBox2.TabIndex = 7
@@ -246,10 +250,28 @@ Partial Class TAUREAU
         '
         Me.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv.Location = New System.Drawing.Point(6, 229)
+        Me.dgv.Location = New System.Drawing.Point(6, 250)
         Me.dgv.Name = "dgv"
-        Me.dgv.Size = New System.Drawing.Size(954, 244)
+        Me.dgv.Size = New System.Drawing.Size(954, 223)
         Me.dgv.TabIndex = 5
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(168, 207)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(560, 25)
+        Me.TextBox6.TabIndex = 32
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.BackColor = System.Drawing.Color.White
+        Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(24, 208)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(121, 22)
+        Me.Label7.TabIndex = 31
+        Me.Label7.Text = "Disponible:  *"
         '
         'TAUREAU
         '
@@ -287,4 +309,6 @@ Partial Class TAUREAU
     Friend WithEvents btnadd As Button
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Button4 As Button
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label7 As Label
 End Class

@@ -91,6 +91,12 @@
     <Compile Include="Insemination.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Recherche.Designer.vb">
+      <DependentUpon>Recherche.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Recherche.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SelectionGestation.Designer.vb">
       <DependentUpon>SelectionGestation.vb</DependentUpon>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Insemination.resx">
       <DependentUpon>Insemination.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recherche.resx">
+      <DependentUpon>Recherche.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectionGestation.resx">
       <DependentUpon>SelectionGestation.vb</DependentUpon>

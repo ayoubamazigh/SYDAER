@@ -33,6 +33,8 @@ Public Class Formzone
 
     Private Sub btnadd_Click(sender As Object, e As EventArgs) Handles btnadd.Click
 
+
+
         If (TextBox1.Text = "" Or TextBox2.Text = "") Then
             MessageBox.Show("remplir les champs requis!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
@@ -96,5 +98,11 @@ Public Class Formzone
             End Try
             connection.Close()
         End If
+    End Sub
+
+    Private Sub Formzone_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        FormElveur.ComboBox1.Items.Clear()
+        FormElveur.dgvLoad()
+        FormElveur.cmbload()
     End Sub
 End Class

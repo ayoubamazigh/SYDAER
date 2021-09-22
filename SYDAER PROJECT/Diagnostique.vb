@@ -77,6 +77,13 @@ Public Class Diagnostique
     End Sub
 
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Dim res As String = 0
+        If (RadioButton1.Checked = True) Then
+            res = 1
+        ElseIf (RadioButton2.Checked = True) Then
+            res = 0
+        End If
+
         Dim thisDate As Date
         thisDate = Today
 
@@ -89,7 +96,7 @@ Public Class Diagnostique
                 Try
                     Connexion()
                     command.Connection = connection
-                    command.CommandText = "INSERT INTO DIAGNOSTIQUE VALUES ('" & Format(DateTimePicker1.Value, "yyyy-M-dd") & "','" & TextBox2.Text & "','" & TextBox4.Text & "','" & ComboBox1.Text & "');"
+                    command.CommandText = "INSERT INTO DIAGNOSTIQUE VALUES ('" & Format(DateTimePicker1.Value, "yyyy-M-dd") & "','" & TextBox2.Text & "','" & ComboBox1.Text & "','" & res & "');"
                     command.CommandType = CommandType.Text
                     Dim i As Integer = command.ExecuteNonQuery()
                     If (i = 1) Then
@@ -119,7 +126,11 @@ Public Class Diagnostique
             DateTimePicker1.Value = datareader(1)
             TextBox2.Text = datareader(2)
             ComboBox1.Text = datareader(4)
-            TextBox4.Text = datareader(3)
+            If (datareader(3) = "1") Then
+                RadioButton1.Checked = True
+            Else
+                RadioButton2.Checked = True
+            End If
         Catch ex As Exception
 
         End Try
@@ -127,10 +138,11 @@ Public Class Diagnostique
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Dim res As String = 0
         Try
             Connexion()
             command.Connection = connection
-            command.CommandText = "UPDATE DIAGNOSTIQUE SET date_Diagnostique = '" & Format(DateTimePicker1.Value, "yyyy-M-dd") & "', type_Diagnostique = '" & TextBox2.Text & "', observation = '" & TextBox4.Text & "', code_Insemination = '" & ComboBox1.Text & "' where code_Diagnostique =  " & TextBox1.Text
+            command.CommandText = "UPDATE DIAGNOSTIQUE SET date_Diagnostique = '" & Format(DateTimePicker1.Value, "yyyy-M-dd") & "', type_Diagnostique = '" & TextBox2.Text & "', observation = '" & res & "', code_Insemination = '" & ComboBox1.Text & "' where code_Diagnostique =  " & TextBox1.Text
             command.CommandType = CommandType.Text
             Dim i As Integer = command.ExecuteNonQuery()
             If (i = 1) Then

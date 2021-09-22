@@ -96,4 +96,11 @@ Public Class Race
         End If
         connection.Close()
     End Sub
+
+    Private Sub Race_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        FormVache.ComboBox1.Items.Clear()
+        FormVache.cmbrload()
+        TAUREAU.ComboBox1.Items.Clear()
+        TAUREAU.cmbload()
+    End Sub
 End Class

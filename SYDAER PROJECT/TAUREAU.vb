@@ -16,7 +16,7 @@ Public Class TAUREAU
         Try
             Connexion()
             command.Connection = connection
-            command.CommandText = "SELECT code_Race FROM Race"
+            command.CommandText = "SELECT name_race FROM Race"
             command.CommandType = CommandType.Text
             datareader = command.ExecuteReader
             While (datareader.Read)
@@ -56,7 +56,7 @@ Public Class TAUREAU
             Try
                 Connexion()
                 command.Connection = connection
-                command.CommandText = "INSERT INTO Taureau VALUES('" & TextBox1.Text & "','" & TextBox2.Text & "','" & ComboBox1.Text & "','" & TextBox4.Text & "','" & TextBox5.Text & "','" & TextBox3.Text & "'); "
+                command.CommandText = "INSERT INTO Taureau VALUES('" & TextBox1.Text & "','" & TextBox2.Text & "',(SELECT code_race from race where name_race ='" & ComboBox1.Text & "'),'" & TextBox4.Text & "','" & TextBox5.Text & "','" & TextBox3.Text & "'," & TextBox6.Text & "); "
                 command.CommandType = CommandType.Text
                 Dim i As Integer = command.ExecuteNonQuery()
                 If (i = 1) Then
@@ -76,7 +76,7 @@ Public Class TAUREAU
         Try
             Connexion()
             command.Connection = connection
-            command.CommandText = "Update TAUREAU Set nom_Taureau ='" & TextBox2.Text & "', code_Race = '" & ComboBox1.Text & "', categorie = '" & TextBox4.Text & "', type_de_Pallaitte ='" & TextBox5.Text & "', origine = '" & TextBox3.Text & "' WHERE code_Taureau = '" & TextBox1.Text & "';"
+            command.CommandText = "Update TAUREAU Set nom_Taureau ='" & TextBox2.Text & "', code_Race = '" & ComboBox1.Text & "', categorie = '" & TextBox4.Text & "', type_de_Pallaitte ='" & TextBox5.Text & "', origine_TAUREAU = '" & TextBox3.Text & "', disponible = " & TextBox6.Text & " WHERE code_Taureau = '" & TextBox1.Text & "';"
 
             command.CommandType = CommandType.Text
             Dim i As Integer = command.ExecuteNonQuery()
@@ -104,12 +104,17 @@ Public Class TAUREAU
             command.CommandText = "SELECT * FROM Taureau WHERE code_Taureau = '" & TextBox1.Text & "';"
             command.CommandType = CommandType.Text
             datareader = command.ExecuteReader
-            datareader.Read()
-            TextBox2.Text = datareader(1)
-            ComboBox1.Text = datareader(2)
-            TextBox4.Text = datareader(3)
-            TextBox5.Text = datareader(4)
-            TextBox3.Text = datareader(5)
+            If (datareader.HasRows) Then
+                datareader.Read()
+                TextBox2.Text = datareader(1)
+                ComboBox1.Text = datareader(2)
+                TextBox4.Text = datareader(3)
+                TextBox5.Text = datareader(4)
+                TextBox3.Text = datareader(5)
+                TextBox6.Text = datareader(6)
+            Else
+                MsgBox("No taureau exist")
+            End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, Me.Text)
         End Try
@@ -141,8 +146,17 @@ Public Class TAUREAU
     End Sub
 
     Private Sub TAUREAU_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        Insemination.ComboBox1.Items.Clear()
         Insemination.cmbload()
         Insemination.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgv.CellContentClick
+
+    End Sub
+
+    Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+
     End Sub
 End Class

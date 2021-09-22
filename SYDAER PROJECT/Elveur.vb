@@ -58,7 +58,7 @@ Public Class FormElveur
     Private Sub btnadd_Click(sender As Object, e As EventArgs) Handles btnadd.Click
         Dim count As Integer
 
-        If (TextBox1.Text = "" Or TextBox4.Text = "" Or TextBox5.Text = "" Or ComboBox1.Text = "") Then
+        If (TextBox1.Text = "" Or ComboBox1.Text = "") Then
             MessageBox.Show("remplir les champs requis!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         Else
 
@@ -79,7 +79,7 @@ Public Class FormElveur
                 Try
                     Connexion()
                     command.Connection = connection
-                    command.CommandText = "INSERT INTO ELVEUR VALUES ('" & TextBox1.Text & "','" & TextBox2.Text & "','" & TextBox3.Text & "','" & TextBox4.Text & "','" & TextBox5.Text & "','" & TextBox6.Text & "',(SELECT code_zone from ZONE where nom_zone = '" & ComboBox1.Text & "'));"
+                    command.CommandText = "INSERT INTO ELVEUR VALUES ('" & TextBox1.Text & "','" & TextBox3.Text & "','" & TextBox2.Text & "','" & TextBox4.Text & "','" & TextBox5.Text & "','" & TextBox6.Text & "',(SELECT code_zone from ZONE where nom_zone = '" & ComboBox1.Text & "'));"
                     command.CommandType = CommandType.Text
                     Dim i As Integer = command.ExecuteNonQuery()
                     If (i = 1) Then
@@ -107,9 +107,9 @@ Public Class FormElveur
             command.CommandType = CommandType.Text
             datareader = command.ExecuteReader
             datareader.Read()
-            TextBox2.Text = datareader(1)
-            TextBox4.Text = datareader(2)
-            TextBox3.Text = datareader(3)
+            TextBox3.Text = datareader(1)
+            TextBox2.Text = datareader(2)
+            TextBox4.Text = datareader(3)
             TextBox5.Text = datareader(4)
             TextBox6.Text = datareader(5)
             ComboBox1.Text = datareader(6)
